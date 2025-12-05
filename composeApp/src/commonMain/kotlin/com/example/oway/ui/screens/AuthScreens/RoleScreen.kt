@@ -1,4 +1,4 @@
-package com.example.oway.ui.screens
+package com.example.oway.ui.screens.AuthScreens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -19,6 +20,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.oway.ui.components.FilledButton
+import com.example.oway.ui.components.OutlineButton
+import com.example.oway.ui.theme.tertiaryDark
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import oway.composeapp.generated.resources.Res
@@ -62,29 +66,13 @@ fun RoleScreen() {
             verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Button(
-                onClick = {},
-                modifier = Modifier.fillMaxWidth(),
-                shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp)
 
-            ) {
-                Text(
-                    text = "Create an account"
-                )
-            }
+            FilledButton(text = "Create an account")
 
             Spacer(Modifier.height(8.dp))
 
-            OutlinedButton(
-                onClick = {},
-                modifier = Modifier.fillMaxWidth(),
-                shape = androidx.compose.foundation.shape.RoundedCornerShape(8.dp)
+            OutlineButton(text = "Sign in")
 
-            ) {
-                Text(
-                    text = "Login"
-                )
-            }
         }
 
     }
