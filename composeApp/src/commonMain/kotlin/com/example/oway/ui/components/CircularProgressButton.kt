@@ -2,6 +2,7 @@ package com.example.oway.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -16,16 +17,23 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.sp
 
 @Composable
 fun CircularProgressButton(
     isLast: Boolean,
     progress: Float,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }
 ) {
     Box(
-        modifier = Modifier.size(90.dp).clickable { onClick() }, contentAlignment = Alignment.Center
+        modifier = Modifier.size(90.dp)
+            .clickable(
+                interactionSource = interactionSource,
+                indication = null,
+                onClick = { onClick() }),
+        contentAlignment = Alignment.Center
     ) {
 //        outer progress ring
         CircularProgressIndicator(

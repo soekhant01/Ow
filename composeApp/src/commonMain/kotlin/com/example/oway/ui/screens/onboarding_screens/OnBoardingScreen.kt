@@ -1,12 +1,17 @@
 package com.example.oway.ui.screens.onboarding_screens
 
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -21,7 +26,9 @@ import oway.composeapp.generated.resources.onBoardingScreen1
 import oway.composeapp.generated.resources.onBoardingScreen2
 
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(
+    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }
+) {
 
     val pages = listOf(
         OnBoardingPage(
@@ -74,8 +81,11 @@ fun OnBoardingScreen() {
                             pagerState.animateScrollToPage(pagerState.currentPage + 1)
                         }
                     else println("Finished")
-                }
+                },
+
+
             )
         }
+        Spacer(Modifier.height(40.dp))
     }
 }
