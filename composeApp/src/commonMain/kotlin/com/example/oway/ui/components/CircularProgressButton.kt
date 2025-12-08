@@ -12,6 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.ui.unit.sp
@@ -38,18 +40,17 @@ fun CircularProgressButton(
             modifier = Modifier.size(70.dp).background(Color.White, CircleShape),
             contentAlignment = Alignment.Center
         ) {
-//            if (isLast)
-//                Text("Go", fontSize = 20.sp, color = Color.Black)
-//             else
-//                Icon(
-//                     imageVector = Icons.Outlined.Home,
-//                    contentDescription = null,
-//                    tint = Color.Black,
-//                    modifier = Modifier.size(30.dp)
-//                )
+            if (isLast)
+                Text("Go", fontSize = 20.sp, color = Color.Black)
+            else
+                Icon(
+                    imageVector = Icons.Filled.ArrowForward,
+                    contentDescription = null,
+                    tint = Color.Black,
+                    modifier = Modifier.size(30.dp)
+                )
 
         }
-
 
 
     }

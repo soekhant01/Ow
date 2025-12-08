@@ -7,3 +7,4 @@ data class OnBoardingPage(
     val description: String,
     val image: Painter
 )
+
