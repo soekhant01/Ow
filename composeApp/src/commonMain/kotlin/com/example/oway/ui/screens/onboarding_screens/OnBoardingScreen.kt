@@ -27,7 +27,6 @@ import oway.composeapp.generated.resources.onBoardingScreen2
 
 @Composable
 fun OnBoardingScreen(
-    interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }
 ) {
 
     val pages = listOf(
