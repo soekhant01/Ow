@@ -63,7 +63,7 @@ fun RoleScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            FilledButton(text = "Create an account", modifier = Modifier,
+            FilledButton(text = "Create an account", modifier = Modifier.fillMaxWidth(),
                 color = Color(0xFF008955))
 
             Spacer(Modifier.height(8.dp))
